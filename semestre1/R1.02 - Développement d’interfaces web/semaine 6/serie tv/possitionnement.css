@@ -1,0 +1,100 @@
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+header {
+    width: 100%;
+    margin: 0; /* Remove all margins */
+}
+
+header img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+}
+
+nav ul li {
+    border: 2px solid blue;
+    border-radius: 10px;
+    background-color: #f1f1f1;  
+    margin-bottom: 20px; /* Add margin to separate sections */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+nav ul li a {
+    display: block;
+}
+
+.container {
+    display: flex; 
+    flex-wrap: nowrap;
+}
+
+main, aside {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 10px;
+}
+
+main {
+    flex-basis: 80%; 
+}
+
+aside {
+    border: 1px solid black;
+    flex-basis: 20%; 
+}
+
+article {
+    display: flex;
+    align-items: flex-start; /* Aligner les items au début de la ligne */
+    flex-wrap: nowrap; /* Ne pas autoriser le retour à la ligne */
+}
+
+article img {
+    margin-right: 10px; /* Espace entre l'image et le texte */
+    width: 150px;
+    height: 150px;
+    flex-shrink: 0; /* Empêche l'image de rétrécir */
+}
+
+article div {
+    display: flex;
+    flex-direction: column; /* Empiler les éléments à la verticale (h1, puis p) */
+    flex-grow: 1; /* Le texte prend tout l'espace disponible */
+}
+
+article h1 {
+    margin: 0; /* Supprimer les marges par défaut de h1 */
+}
+
+article p {
+    margin: 0; /* Supprimer les marges par défaut de p */
+    margin-top: 10px; /* Ajouter un peu d'espace entre h1 et p */
+}
+
+ul {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 0;
+}
+
+li {
+    display: inline;
+    flex-basis: 20%;
+    flex-grow: 1;
+    list-style-type: none;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+footer {
+    border: 1px solid black;    
+}

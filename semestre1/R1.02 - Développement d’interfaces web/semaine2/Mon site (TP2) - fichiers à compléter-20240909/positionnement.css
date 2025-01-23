@@ -1,0 +1,26 @@
+/* Positionnement des images de la liste du header */
+header ul{
+  display: flex;
+  justify-content: space-around;
+}
+
+/* dans le main */
+main{
+  display: flex;
+}
+
+main p{
+  flex-basis: 60%;
+  flex-grow: 1;
+}
+
+main nav {
+  flex-basis: 30%;
+  flex-grow: 1;
+}
+
+/* dans le footer */
+footer{
+  display: flex;
+  justify-content: space-around;
+}

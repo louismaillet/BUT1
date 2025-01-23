@@ -1,0 +1,25 @@
+1.
+seul le fichier ExecutableCouple.java peut etre lancer car il a la ligne :
+public static void main(String [] args)
+
+2.
+attribut : premier, second
+construceurs :  Couple(int x, int y) et Couple()
+methode : setPremier() permuter() somme() toString()
+
+3.
+ligne 1 :
+(5,-4)
+ligne 2 :
+1
+ligne 3:
+(0,7)
+
+4.
+javac ExecutableCouple.java
+
+5.
+java ExecutableCouple
+
+
+

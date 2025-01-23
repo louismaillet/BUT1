@@ -1,0 +1,42 @@
+body{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px ;
+    
+    
+
+}
+header{
+    flex-basis: 100%;
+    flex-grow: 1;
+    height: 10vh;
+    text-align: center;
+}
+section {
+    display: flex;
+    flex-basis: 100%;
+    flex-grow: 1;
+}
+nav, aside{
+    flex-basis: 20%;
+    flex-grow: 1;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 60vh;
+
+    
+}
+article{
+    flex-basis: 40%;
+    margin: 5px;
+}
+footer{
+    flex-basis: 90%;
+    flex-grow: 1;
+    height: 10vh;    
+    text-align: center;   
+}
+article, aside, nav, footer, header{
+    border: thin solid gray;
+
+}

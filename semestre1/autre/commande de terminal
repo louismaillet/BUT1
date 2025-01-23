@@ -1,0 +1,16 @@
+commande de terminal 
+
+ls = voir tout les document / fichier 
+cd "nom dossier" = aller dans un dossier
+cd .. = revenir en arriere
+cat "nom fichier" = lire un fichier texte 
+tab = complete la suite de ton fichier / dossier
+tree = l'arbre du dossier 
+~ = home
+touch / mkdir = cree un fichier 
+rm = supprime un dossier
+rm -r = supprime un ossier et tout ce qu'il contient
+
+ls :
+ls -a = voir tout les fichiers meme les cacher
+ls -l = voir plus d'info sur les dossiers

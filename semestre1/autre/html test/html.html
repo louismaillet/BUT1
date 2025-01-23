@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #dynamicContent {
+            background-color: lightgray;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        #nestedDiv {
+            background-color: lightblue;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        #hiddenDiv {
+            background-color: lightgreen;
+            padding: 10px;
+            display: none;
+        }
+        #toggleDiv, #toggleDiv2, #toggleDiv3 {
+            background-color: lightpink;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        #colorDiv {
+            background-color: lightcoral;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        #myForm {
+            background-color: lightyellow;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        #myForm input[type="text"], #myForm input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        #myForm button {
+            background-color: lightblue;
+            color: white;
+            padding: 10px;
+            margin-top: 10px;
+        }
+        #myForm input[type="submit"] {
+            background-color: lightblue;
+            color: white;
+            padding: 10px;
+            margin-top: 10px;
+        }
+        #myForm input[type="submit"]:hover {
+            background-color: darkblue;
+        }
+        #myForm input[type="text"]:focus, #myForm input[type="email"]:focus {
+            border: 2px solid blue;
+        }
+        #myForm input[type="submit"]:disabled {
+            background-color: lightgray;
+            cursor: not-allowed;
+        }
+        #myForm input[type="text"]:disabled, #myForm input[type="email"]:disabled {
+            background-color: lightgray;
+            cursor: not-allowed;
+        }
+        #myForm input[type="text"]:focus + label, #myForm input[type="email"]:focus + label {
+            color: blue;
+        }
+        #myForm input[type="text"]:disabled + label, #myForm input[type="email"]:disabled + label {
+            color: lightgray;
+        }
+        #myForm input[type="text"]:focus + label::after, #myForm input[type="email"]:focus + label::after {
+            content: " *";
+            color: red;
+        }
+        #myForm input[type="text"]:focus + label::before, #myForm input[type="email"]:focus + label::before {
+            content: attr(data-placeholder);
+            color: gray;
+        }
+        #myForm input[type="text"]:disabled + label::after, #myForm input[type="email"]:disabled + label::after {
+            content: "";
+        }
+        #myForm input[type="text"]:focus + label::before, #myForm input[type="email"]:focus + label::before {
+            content: attr(data-placeholder);
+            color: gray;
+        }
+
+
+    </style>
+</head>
+
+<form id="myForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" data-placeholder="Enter your name" required>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" data-placeholder="Enter your email" required>
+    <input type="submit" value="Submit">
+</form>
+
+<script>
+    // Function to change the background color of the body
+    function changeBackgroundColor() {
+        document.body.style.backgroundColor = getRandomColor();
+    }
+    
+    // Function to change the text color of the header
+
+    function changeTextColor() {
+        document.getElementById("myHeader").style.color = getRandomColor();
+    }
+    
+    // Function to toggle the display of a div
+    function toggleDiv() {
+        var div = document.getElementById("dynamicContent");
+        div.style.display = div.style.display === "none"? "block" : "none";
+    }
+    
+    // Function to toggle the display of another div
+    function toggleDiv2() {
+        var div = document.getElementById("nestedDiv");
+        div.style.display = div.style.display === "none"? "block" : "none";
+    }
+    
+    // Function to toggle the display of a third div
+    function toggleDiv3() {
+        var div = document.getElementById("hiddenDiv");
+        div.style.display = div.style.display === "none"? "block" : "none";
+    }
+    
+    // Function to change the color of a div
+    function changeColor() {
+        var
+        var div = document.getElementById("colorDiv");
+        div.style.backgroundColor = getRandomColor();
+        div.style.color = getRandomColor();
+        div.style.border = "2px solid " + getRandomColor();
+        div.style.borderRadius = getRandomNumber(0, 100) + "%";
+        div.style.boxShadow = getRandomNumber(0, 10) + "px " + getRandomNumber(0, 10) + "px " + getRandomNumber(0, 10) + "px " + getRandomColor();
+        div.style.transition = "background-color 0.5s, color 0.5s, border 0.5s, border-radius 0.5s, box-shadow 0.5s";
+        div.style.backgroundColor = getRandomColor();
+        div.style.color = getRandomColor();
+        div.style.border = "2px solid " + getRandomColor();
+        div.style.borderRadius = getRandomNumber(0, 100) + "%";
+
+        div.style.boxShadow = getRandomNumber(0, 10) + "px " + getRandomNumber(0, 10) + "px " + getRandomNumber(0, 10) + "px " + getRandomColor();
+        div.style.transition = "background-color 0.5s, color 0.5s, border 0.5s, border-radius 0.5s, box-shadow 0.5s";
+    }
+    
+    // Function to change the text of a paragraph
+    function changeText() {
+        var paragraph = document.getElementById("myParagraph");
+        paragraph.textContent = getRandomText();
+    }
+    
+    // Function to generate a random color
+    function getRandomColor() {
+        var letters = "0123456789ABCDEF";
+        var color = "#";
+        for (var i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+    
+    // Function to generate a random number between two numbers
+    function getRandomNumber(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+    
+    // Function to generate a random text
+    function getRandomText() {
+        var words = ["Hello", "World", "Welcome", "to", "the", "website"];
+        return words[Math.floor(Math.random() *
+        words.length)] + " " + words[Math.floor(Math.random() * words.length)] + " " + words[Math.floor(Math.random() * words.length)];
+
+}
+</script>
+
+
+<body>
+    <h1 id="myHeader">Welcome!</h1>
+    <p>This is a paragraph.</p>
+    <button onclick="changeBackgroundColor()">Change Background Color</button>
+    <button onclick="changeTextColor()">Change Text Color</button>
+    <button onclick="toggleDiv()">Toggle Div</button>
+    <button onclick="toggleDiv2()">Toggle Div 2</button>
+    <button onclick="toggleDiv3()">Toggle Div 3</button>
+    <button onclick="changeColor()">Change Color</button>
+
+
+    <h1>Hello, World!</h1>
+    <p>This is a paragraph.</p>
+    <button onclick="changeText()">Change Text</button>
+    <div id="dynamicContent"></div>
+    <div id="nestedDiv">
+        <h2>Nested Div</h2>
+        <p>This is a nested paragraph.</p>
+    </div>
+    <div id="hiddenDiv" style="display: none;">
+        <h3>Hidden Div</h3>
+        <p>This is a hidden paragraph.</p>
+    </div>
+    <div id="toggleDiv">
+        <h4>Toggle Div</h4>
+        <p>This is a toggle paragraph.</p>
+    </div>
+    <div id="toggleDiv2">
+        <h5>Toggle Div 2</h5>
+        <p>This is another toggle paragraph.</p>
+    </div>
+    <div id="toggleDiv3">
+        <h6>Toggle Div 3</h6>
+        <p>This is a third toggle paragraph.</p>
+    </div>
+    <div id="colorDiv">
+        <h7>Color Div</h7>
+        <p>This is a paragraph with a specific color.</p>
+    </div>
+
+
+    <form id="myForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        function changeBackgroundColor() {
+            document.body.style.backgroundColor = getRandomColor();
+        }
+        function changeTextColor() {
+            document.body.style.color = getRandomColor();
+        }
+        function toggleDiv() {
+            var div = document.getElementById("dynamicContent");
+            div.style.display = div.style.display === "none"? "block" : "none";
+        }
+        function toggleDiv2() {
+            var div = document.getElementById("nestedDiv");
+            div.style.display = div.style.display === "none"? "block" : "none";
+        }
+        function toggleDiv3() {
+            var div = document.getElementById("hiddenDiv");
+            div.style.display = div.style.display === "none"? "block" : "none";
+        }
+        function changeColor() {
+            var div = document.getElementById("colorDiv");
+            div.style.backgroundColor = getRandomColor();
+        }
+        function changeText() {
+            var header = document.getElementById("myHeader");
+            header.textContent = "Goodbye, World!";
+        }
+        function getRandomColor() {
+            var letters = "0123456789ABCDEF";
+            var color = "#";
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+        document.getElementById("myForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            alert("Name: " + name + "\nEmail: " + email);
+        });
+        var inputFields = document.querySelectorAll("#myForm input[type='text'], #myForm input[type='email']");
+        inputFields.forEach(function(inputField) {
+            inputField.addEventListener("focus", function() {
+                inputField.nextElementSibling.style.display = "block";
+            });
+            inputField.addEventListener("blur", function() {
+                if (inputField.value === "") {
+                    inputField.nextElementSibling.style.display = "none";
+                }
+            });
+        });
+        var submitButton = document.getElementById("myForm").querySelector("button[type='submit']");
+        submitButton.disabled = true;
+        inputFields.forEach(function(inputField) {
+            inputField.addEventListener("input", function() {
+                submitButton.disabled = inputFields.some(function(inputField) {
+                    return inputField.value === "";
+                });
+            });
+        });
+        document.getElementById("toggleDiv").addEventListener("click", function() {
+            var div = document.getElementById("toggleDiv");
+            var paragraph = div.querySelector("p");
+            paragraph.textContent = "Toggle paragraph updated!";
+        });
+        document.getElementById("toggleDiv2").addEventListener("click", function() {
+            var div = document.getElementById("toggleDiv2");
+            var paragraph = div.querySelector("p");
+            paragraph.textContent = "Another toggle paragraph updated!";
+        });
+        document.getElementById("toggleDiv3").addEventListener("click", function() {
+            var div = document.getElementById("toggleDiv3");
+            var paragraph = div.querySelector("p");
+            paragraph.textContent = "Third toggle paragraph updated!";
+        });
+        document.getElementById("myForm").addEventListener("reset", function() {
+            inputFields.forEach(function(inputField) {
+                inputField.value = "";
+                inputField.nextElementSibling.style.display = "none";
+            });
+            submitButton.disabled = true;
+        });
+        document.getElementById("myForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            alert("Name: " + name + "\nEmail: " + email);
+        });
+        document.getElementById("myForm").addEventListener("input", function() {
+            submitButton.disabled = inputFields.some(function(inputField) {
+                return inputField.value === "";
+            });
+        });
+        document.getElementById("myForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            alert("Name: " + name + "\nEmail: " + email);
+        });
+        document.getElementById("myForm").addEventListener("input", function() {
+            submitButton.disabled = inputFields.some(function(inputField) {
+                return inputField.value === "";
+            });
+        });
+        document.getElementById("myForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            alert("Name: " + name + "\nEmail: " + email);
+        });
+        document.getElementById("myForm").addEventListener("input", function() {
+            submitButton.disabled = inputFields.some(function(inputField) {
+                return inputField.value === "";
+            });
+        });
+        document.getElementById("myForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            alert("Name: " + name + "\nEmail: " + email);
+        });
+
+
+</body>
+<footer>
+    &copy; 2021 My Website. All rights reserved.
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms of Service</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="https://www.google.com/maps/place/My+Address/@45.4215255,-75.6971949,17z/data=!3m1!4b1!4m5!3m4!1s0x4cc91959a5b38559:0x8874a363581f7
+    <a href="https://www.twitter.com/myaccount">Twitter</a>
+    <a href="https://www.instagram.com/myprofile">Instagram</a>
+    <a href="https://www.linkedin.com/in/myprofile">LinkedIn</a>
+    <a href="https://www.pinterest.com/myprofile">Pinterest</a>
+    <a href="https://www.youtube.com/channel/mychannel">YouTube</a>
+    <a href="https://www.github.com/myusername">GitHub</a>
+    <a href="https://www.stackoverflow.com/users/myuserid">Stack Overflow</a>
+    <a href="https://www.reddit.com/user/myusername">Reddit</a>
+
+
+</html>

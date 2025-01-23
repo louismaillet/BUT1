@@ -1,0 +1,28 @@
+body{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px ;
+}
+header{
+    flex-basis: 100%;
+}
+article{
+    flex-basis: 58%;
+    flex-grow: 1;
+
+}
+section:first-child{
+    flex-basis: 20%;
+}
+h1, p {
+    flex-basis: 50%;
+    
+}
+#rose{
+    flex-basis: 100%;
+    flex-grow: 1;
+    
+}
+section, article, header{
+    margin: 5px;
+}
