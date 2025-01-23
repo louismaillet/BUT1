@@ -1,1 +1,2 @@
 - Comprendre Git
+- Effectuer plusieurs commits
