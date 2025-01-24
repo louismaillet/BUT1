@@ -1,0 +1,33 @@
+Projet_java1
+
+
+1.1
+a) miaule() devientMuet() setNom() getNom() estEndormi()
+b) |--------------------------------------------------|
+   |                       Chat                       |
+   |--------------------------------------------------|
+   | - nom : String                                   |
+   | - bavard : boolean                               |
+   |--------------------------------------------------|   
+   | + Chat(nom : String, bavard : int)               |
+   | + Chat(nom : String)                             |
+   | + miaule() : void                                |
+   | + devientMuet() : void                           |
+   | + setNom(nouveauNom : String) : void             |
+   | + getNom() : String                              |
+   | + estEndormi(heure : Double ) : boolean          |
+   |--------------------------------------------------|
+
+
+c) Chat.java 
+   Dialogue.java
+
+d) javac Chat.java && javac Dialogue.java 
+    ou
+   javac ./*
+
+e) java ExecutableChat
+
+f) il va mettre Chloé, Felix, Ozone
+
+
