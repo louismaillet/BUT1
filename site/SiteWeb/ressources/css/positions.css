@@ -1,0 +1,43 @@
+/*Header + Nav*/
+
+header {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+.navheader ul a li {
+    padding: 10px;
+}
+.navheader ul{
+    display: flex;
+    flex-wrap: nowrap;
+    padding-left: 0px;
+}
+
+.navheader li{
+    flex-basis: 19%;
+    flex-grow: 1;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+/*Fiche Identité*/
+
+.ficheidentité {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.ficheidentité article{
+    flex-basis: 30%;
+    flex-grow: 1;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 8px;
+}
+
+.fichetitle {
+    border: 1px solid red;
+}
