@@ -1,23 +1,86 @@
+/*Setup*/
+html {
+    font-family: 'Arial', sans-serif;
+}
+
+body h1, h3 {
+    margin: 0 0 14px
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: lightgrey;
+}
+
+/*Header + Nav*/
+header {
+    margin-bottom: 10px;
+}
 
 .navheader {
     text-align: center;
-    
 }
 
-.navheader ul li {
+.navheader a li {
     list-style:none;
-    border: 1px solid black;
-    border-radius: 30px;
-    cursor: pointer;
+    border: 1px solid #9678d3;
+    border-radius: 35px;
+    background-color: #ddd;
+    color: black;
+    text-align: center;
+    font-size: 16px;
+    margin: 5px 7px;
+    transition-duration: 0.3s;
 }
 
 .navheader a {
     text-decoration: none;
 }
 
+.navheader a li:hover {
+    background-color: #9678d3;
+    color: white;
+}
+
+.header_img {
+    max-width: 250px;
+}
+
+
 /*Fiche Identité*/
 
 .ficheidentité article {
     border:1px solid black;
     border-radius: 30px;
+    background-color: white;
+    box-shadow: 0px 0px 10px 1px #9678d3;
+    filter: blur(1px);
+    transition: 0.2S;
 }
+
+.fiche1 img {
+    width: 90px;
+    height: 90px;
+}
+
+.ficheidentité article:hover {
+    filter: blur(0px);
+    transition: 0.2s;
+}
+
+.ficheidentité img {
+    max-width: 150px;
+}
+
+/*Image*/
+
+
+/*Main*/
+main {
+    margin: 5px;
+    padding: 5px;
+}
+
+
+
