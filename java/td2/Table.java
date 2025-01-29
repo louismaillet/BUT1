@@ -21,13 +21,13 @@ public class Table {
         return somme / this.lesConvives.size();
     }
     public int nombreDAdultes(){
-         int nombre = 0;
-         for (Personne convive : this.lesConvives){
+        int nombre = 0;
+        for (Personne convive : this.lesConvives){
             if(convive.getAge() >= 18){
                 nombre += 1;
             }
-         }
-         return nombre;
+        }
+        return nombre;
     }
     public String lePlusJeune(){
         String nomJeune = "";
@@ -50,7 +50,7 @@ public class Table {
         int i = 0;
         for  (Personne convive : this.lesConvives){
             if (convive.getNom() == personne1){
-                 if (personne2 == this.lesConvives.get(i+1).getNom() || personne2 == this.lesConvives.get(i-1).getNom()){
+                if (personne2 == this.lesConvives.get(i+1).getNom() || personne2 == this.lesConvives.get(i-1).getNom()){
                     return true;
                 }
             return false;
@@ -60,13 +60,22 @@ public class Table {
         return false;
     }
     public void echange( String personne1 , String personne2 ){
-        String varInter = "";
+        int i1 = 0;
+        int i2 = 0;
+        Personne p1 = null;
+        Personne p2 = null;
         int i = 0;
         for (Personne convive : this.lesConvives){
             if(convive.getNom() == personne1){
-                varInter = convive.getNom();
-                 lesConvives.set(i,personne2);
+                i1 = i;
+                p1 = convive;
             }
+            if(convive.getNom() == personne2){
+                i2 = i;
+                p2 = convive;
+            }
+        lesConvives.set(i1,p2);
+        lesConvives.set(i2,p1);
         }
     
     

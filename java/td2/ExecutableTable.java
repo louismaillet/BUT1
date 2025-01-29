@@ -13,5 +13,6 @@ public class ExecutableTable {
 
         diner.echange("Albert", "David");
         assert !diner.sontACote("Albert", "Belle");
+        
     }
 }
