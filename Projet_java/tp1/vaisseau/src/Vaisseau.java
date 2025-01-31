@@ -20,8 +20,12 @@ public class Vaisseau{
     public int getNombrePassagers() {
         return this.nombrePassagers;
     }
+    public void setPuissance(int newPuissance){
+        this.puissance = newPuissance;
+    }
     public boolean transportePassagers() {
         return this.nombrePassagers > 0;
     }
+
     
 }

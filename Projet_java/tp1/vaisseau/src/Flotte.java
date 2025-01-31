@@ -1,9 +1,8 @@
 import java.util.ArrayList;
-import java.util.List;
 
 public class Flotte {
     private String nom;
-    private List<Vaisseau> vaisseaux;
+    private ArrayList<Vaisseau> vaisseaux;
 
     public Flotte(String nom){
         this.nom = nom;
@@ -18,14 +17,12 @@ public class Flotte {
     public void ajoute(Vaisseau unVaisseau){
         vaisseaux.add(unVaisseau);
     }
-    public void ajoute(String nom){
-        Vaisseau vaisseauTemporaire = new Vaisseau(nom, 0);
-        vaisseaux.add(vaisseauTemporaire);
-    }
+
     public void ajoute(String nom, int puissance){
         Vaisseau vaisseauTemporaire = new Vaisseau(nom,puissance,0);
         vaisseaux.add(vaisseauTemporaire);
     }
+
     public void ajoute(String nom, int puissance, int nombrePassagers){
         Vaisseau vaisseauTemporaire = new Vaisseau(nom,puissance,nombrePassagers);
         vaisseaux.add(vaisseauTemporaire);
@@ -34,9 +31,11 @@ public class Flotte {
     public String getNom(){
         return this.nom;    
     }
+
     public int nombreVaisseaux(){
         return this.vaisseaux.size();
     }
+
     public int totalPuissance(){
         int cpt = 0;
         for (Vaisseau vaiss : vaisseaux){
