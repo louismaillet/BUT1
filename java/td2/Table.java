@@ -50,15 +50,24 @@ public class Table {
         int i = 0;
         for  (Personne convive : this.lesConvives){
             if (convive.getNom() == personne1){
-                if (personne2 == this.lesConvives.get(i+1).getNom() || personne2 == this.lesConvives.get(i-1).getNom()){
-                    return true;
+                if(this.lesConvives.size() > i++){
+                    if (personne2 == this.lesConvives.get(i++).getNom() ){
+                        return true;
+                    }
                 }
+                if (i-1 > 0){
+                    if (personne2 == this.lesConvives.get(i-1).getNom()){
+                        return true;
+                    }
+                }
+
             return false;
             }
         i++;
         }
         return false;
     }
+    
     public void echange( String personne1 , String personne2 ){
         int i1 = 0;
         int i2 = 0;
@@ -74,6 +83,7 @@ public class Table {
                 i2 = i;
                 p2 = convive;
             }
+            i++;
         lesConvives.set(i1,p2);
         lesConvives.set(i2,p1);
         }
