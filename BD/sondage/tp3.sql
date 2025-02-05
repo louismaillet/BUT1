@@ -216,7 +216,9 @@ GROUP BY nomPan, intituleCAT;
 -- = Reponse question 10.
 
 SELECT intituleCAT, count(numSond) AS nbF
-FROM 
+FROM SONDE NATURAL JOIN CARACTERISTIQUE NATURAL JOIN CATEGORIE
+WHERE sexe = 'F'
+GROUP BY intituleCAT;
 
 -- +-------------------+--
 -- * Question 11 :     --
@@ -237,6 +239,10 @@ FROM
 -- | etc...
 -- = Reponse question 11.
 
+SELECT prenomSond, count(numSond) as nbPers
+FROM SONDE
+GROUP BY prenomSond
+HAVING count(numSond) > 20;
 
 
 -- +-------------------+--
@@ -257,6 +263,11 @@ FROM
 -- | Professions intermédiaires                      | 3      |
 -- +-------------------------------------------------+--------+
 -- = Reponse question 12.
+
+SELECT intituleCAT, count(numSond) AS nbPers
+FROM SONDE NATURAL JOIN CARACTERISTIQUE NATURAL JOIN CATEGORIE NATURAL JOIN CONSTITUER NATURAL JOIN PANEL
+WHERE nomPan = "France Global 1" AND YEAR(dateNaisSond) = 2001
+GROUP BY intituleCAT;
 
 
 

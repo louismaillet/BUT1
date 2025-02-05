@@ -51,12 +51,12 @@ public class Table {
         for  (Personne convive : this.lesConvives){
             if (convive.getNom() == personne1){
                 if(this.lesConvives.size() > i++){
-                    if (personne2 == this.lesConvives.get(i++).getNom() ){
+                    if (personne2.equals(this.lesConvives.get(i++).getNom() )){
                         return true;
                     }
                 }
                 if (i-1 > 0){
-                    if (personne2 == this.lesConvives.get(i-1).getNom()){
+                    if (personne2.equals(this.lesConvives.get(i-1).getNom())){
                         return true;
                     }
                 }
@@ -75,11 +75,11 @@ public class Table {
         Personne p2 = null;
         int i = 0;
         for (Personne convive : this.lesConvives){
-            if(convive.getNom() == personne1){
+            if(convive.getNom().equals(personne1)){
                 i1 = i;
                 p1 = convive;
             }
-            if(convive.getNom() == personne2){
+            if(convive.getNom().equals(personne2)){
                 i2 = i;
                 p2 = convive;
             }
