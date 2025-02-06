@@ -16,20 +16,5 @@ public class Entier{
     public String toString(){
         return " " + this.entier+" ";
     }
-    public static void main(String[] args){
-        Entier quatre = new Entier(4);
-        Entier deuxEtdeux = new Entier(2+2);
-        Integer autreQuatre = 4;
-        Entier encoreQuatre = quatre;
-        System.out.println(deuxEtdeux);
-        System.out.println(quatre== autreQuatre);
-        System.out.println(quatre == deuxEtdeux);
-        System.out.println(encoreQuatre.equals(quatre));
-        System.out.println(encoreQuatre == quatre); 
-        System.out.println(encoreQuatre == deuxEtdeux);
-        System.out.println(encoreQuatre.equals(deuxEtdeux));
-        System.out.println(autreQuatre == quatre.getEntier());   
-        
-    }
 }
 
