@@ -1,0 +1,23 @@
+1.
+===_=
+
+2.
+X
+
+3.
+
+___ entre les lettres
+_______ entre les mots
+
+4. 
+
+To To
+
+5.
+
+===_===_=___=_===_______===_=_=_=___=_=_===
+
+6.
+
+ligne 4 c'est un char donc == 
+ligne 5 c'est un String donc equals

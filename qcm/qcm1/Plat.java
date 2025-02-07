@@ -3,7 +3,7 @@ public class Executable{
         int compteur1 = 700;
         int compteur2 = 0;
         for(int i = 0; i < 1000; i++){
-            for(int j = 0; j<1; j++){
+            for(int j = 0; j<10000000; j++){
                 compteur2 = (compteur2 + 1) % 7;
             }
             compteur1 = compteur1 + 8;

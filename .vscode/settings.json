@@ -9,5 +9,6 @@
     "java.project.referencedLibraries": [
         "/home/iut45/Etudiants/o22406805/Documents/Dossier but/dionysies/junit-4.13.2.jar",
         "/home/iut45/Etudiants/o22406805/Documents/Dossier but/dionysies/hamcrest-2.2.jar"
-    ]
+    ],
+    "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx4G -Xms100m -Xlog:disable"
 }
